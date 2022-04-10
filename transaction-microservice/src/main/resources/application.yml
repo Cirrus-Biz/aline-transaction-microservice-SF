@@ -1,18 +1,18 @@
 server:
-  port: ${APP_PORT}
+  port: 8073
 
 spring:
   application:
-    name: "transaction"
+    name: "transaction-microservice"
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
   datasource:
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: "stephenfreed"
+    password: "password"
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}"
+    url: "jdbc:mysql://localhost:3306/alinedb"
     initialization-mode: always
 
 app:
@@ -24,14 +24,16 @@ app:
   email:
     from: "no-reply@alinefinancial.com"
     enable: true
-  security:
-    secret-key: "${ENCRYPT_SECRET_KEY}"
-    jwt:
-      secret-key: "${JWT_SECRET_KEY}"
   aws:
     email:
       template-bucket-name: "aline-email-templates"
     credentials:
       access-key-id: "${APP_USER_ACCESS_KEY}"
       secret-access-key: "${APP_USER_SECRET_KEY}"
+  security:
+    secret-key: "?D(G-KaPdSgVkYp3s6v9y$B&E)H@MbQe"
+    jwt:
+      secret-key: "?D(G-KaPdSgVkYp3s6v9y$B&E)H@MbQe"
+
+
 
