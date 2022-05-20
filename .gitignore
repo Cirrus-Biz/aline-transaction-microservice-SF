@@ -48,3 +48,5 @@ local.properties
 .recommenders
 .DS_Store
 /src/.DS_Store
+.DS_Store
+transaction-microservice/.DS_Store
